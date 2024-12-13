@@ -11,7 +11,7 @@ authors = [
 maintainers = [
   {name = "Geduo Zeng", email = "geduozeng@ruc.edu.cn"}
 ]
-description = "Add your description here"
+description = "2024fall coding basis final project in ISBD, RUC"
 readme = "README.md"
 license = {file = "LICENSE.txt"}
 classifiers = [
