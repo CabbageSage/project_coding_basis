@@ -15,8 +15,12 @@ description = "Add your description here"
 readme = "README.md"
 license = {file = "LICENSE.txt"}
 classifiers = [
-  "Development Status :: 4 - Beta",
-  "Programming Language :: Python"
+  "Development Status :: 1 - Planning",
+  "Programming Language :: Python",
+  "Environment :: GPU :: NVIDIA CUDA",
+  "Intended Audience :: Education",
+  "Framework :: Jupyter",
+  "License :: OSI Approved :: MIT License",
 ]
 
 requires-python = ">=3.12"
