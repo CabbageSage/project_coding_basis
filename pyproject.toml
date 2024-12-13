@@ -5,7 +5,6 @@ build-backend = "hatchling.build"
 [project]
 name = "project-coding"
 version = "0.1.0"
-dynamic = ["version"]
 authors = [
   {name = "Geduo Zeng", email = "geduozeng@ruc.edu.cn"}
   ]
