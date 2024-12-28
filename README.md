@@ -4,7 +4,11 @@
 
 ## 项目简介
 
-Project Coding Basis 是一个基于深度学习的项目，包含了变分自编码器（VAE）和扩散模型的实现。该项目旨在帮助学生理解和实现这些模型，并应用于图像生成任务。
+Project Coding Basis 是一个基于深度学习的项目，包含了变分自编码器（VAE）和扩散模型的实现。该项目旨在理解和实现这些模型，并应用于图像生成任务。
+
+## 环境管理
+
+本项目使用 [uv](https://docs.astral.sh/uv/) 进行虚拟环境管理。
 
 ## 文件结构
 
@@ -18,11 +22,6 @@ project_coding_basis/
 │   ├── vae.pth
 ├── config.py
 ├── data/
-│   ├── FashionMNIST/
-│   │   ├── raw/
-│   │       ├── t10k-images-idx3-ubyte
-│   │       ├── t10k-labels-idx1-ubyte
-│   │       ├── train-images-idx3-ubyte
 │   ├── MNIST/
 │       ├── raw/
 │           ├── ...
@@ -79,6 +78,39 @@ project_coding_basis/
     ```bash
     python train_diffusion.py
     ```
+#### 调参
+在训练模型时，您可以通过修改配置文件 `config.py` 来调整模型的超参数。以下是一些常见的超参数及其说明：
+
+- `learning_rate`：学习率，控制模型参数更新的步长。
+- `batch_size`：批次大小，决定每次迭代时使用的样本数量。
+- `num_epochs`：训练轮数，决定模型训练的总迭代次数。
+- `latent_dim`：潜在空间维度，决定VAE模型的潜在变量维度。
+
+您可以在 `config.py` 文件中找到这些超参数的默认值，并根据需要进行调整。例如：
+
+```python
+# config.py
+learning_rate = 0.001
+batch_size = 64
+num_epochs = 100
+latent_dim = 20
+```
+
+
+
+修改这些参数后，重新运行训练脚本即可应用新的超参数设置：
+
+- 训练VAE模型：
+    ```bash
+    python train_vae.py
+    ```
+
+- 训练扩散模型：
+    ```bash
+    python train_diffusion.py
+    ```
+
+
 
 ### 生成图像
 
@@ -87,5 +119,3 @@ project_coding_basis/
 ## 许可证
 
 本项目采用 [MIT 许可证](LICENSE.txt)。
-
-感谢您的关注和支持！
