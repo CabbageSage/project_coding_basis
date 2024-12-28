@@ -21,7 +21,18 @@ classifiers = [
 
 requires-python = ">=3.12"
 dependencies = [
+    "accelerate>=1.2.1",
+    "datasets>=3.2.0",
+    "diffusers>=0.31.0",
+    "ftfy>=6.3.1",
+    "matplotlib>=3.9.4",
+    "numpy>=2.2.0",
+    "pip>=24.3.1",
+    "pyarrow>=18.1.0",
+    "pyqt5",
     "torch>=2.5.1",
+    "torchvision>=0.20.1",
+    "transformers>=4.47.0",
 ]
 
 [project.optional-dependencies]
